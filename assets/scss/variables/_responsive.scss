@@ -2,6 +2,7 @@ $responsive-sm: 576px;
 $responsive-md: 768px;
 $responsive-lg: 992px;
 $responsive-xl: 1200px;
+$responsive-xxl: 1600px;
 
 @media (min-width: $responsive-sm) {}
 
@@ -10,3 +11,5 @@ $responsive-xl: 1200px;
 @media (min-width: $responsive-lg) {}
 
 @media (min-width: $responsive-xl) {}
+
+@media (min-width: $responsive-xxl) {}

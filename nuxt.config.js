@@ -14,7 +14,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', integrity: 'sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==', crossorigin: 'anonymous', referrerpolicy: 'no-referrer' }
     ]
   },
 
@@ -38,9 +39,21 @@ export default {
     '@nuxtjs/stylelint-module'
   ],
 
+  stylelint: {
+    fix: true,
+    configFile: './stylelint.config.js'
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://www.npmjs.com/package/@nuxtjs/style-resources
+    '@nuxtjs/style-resources'
   ],
+
+  // Style resourses configuration: https://www.npmjs.com/package/@nuxtjs/style-resources
+  styleResources: {
+    scss: '@/assets/scss/variables/_responsive.scss'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
